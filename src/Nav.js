@@ -2,23 +2,29 @@ import React from "react";
 import logo from
 
 const Nav = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    }
+        
+
     return (
-        <nav>
-            <a href="/">
+        <nav className={`navbar ${menuOpen ? "open" : ""}`}>
+            <a href="/" className="logo">
                 <img src={logo} alt='logo'/>
             </a>
 
             {/* mobile navbar */}
 
-            <div>
-            <div className="bar"></div>    
-            <div className="bar"></div>    
+            <div className="menu-icon"> 
+                <div className="bar"></div>    
+                <div className="bar"></div>    
             <div className="bar"></div>    
 
             </div>
 
             {/* nav items */}
-            <ul>
+            <ul className={`nav-links`}>
                 <li>
                     <a href="/">Home</a>
                 </li>

@@ -4,17 +4,17 @@ import Header from './Header';
 import Nav from './Nav';
 import Main from './Main';
 import Footer from './Footer';
+import BookingForm from './BookingForm';
 
 function App() {
   return (
-    <p>Homepage
       <>
-      <Header/>
       <Nav/>
+      <Header/>
+      <BookingForm/>
       <Main/>
       <Footer/>
       </>
-    </p>
    
   );
 }

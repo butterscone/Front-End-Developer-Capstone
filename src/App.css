@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+nav {
+  z-index=10001;
+}
+
+.navbar {
+  padding: 10px 13%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-icon {
+  display: none;
+  cursor:pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links.visible {
+  flex-direction: column;
+  position: abosolute;
+  top: 40px;
+  right: 0;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
